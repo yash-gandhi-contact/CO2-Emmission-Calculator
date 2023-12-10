@@ -104,4 +104,6 @@ if st.button("Calculate CO2 Emissions"):
     with col4:
         st.subheader("Total Carbon Footprint")
         st.success(f"🌍 Your total carbon footprint is: {total_emissions} tonnes CO2 per year")
-        st.warning("In 2021, CO2 emissions per capita for India was 1.9 tons of CO2 per capita. Between 1972 and 2021, CO2 emissions per capita of India grew substantially from 0.39 to 1.9 tons of CO2 per capita rising at an increasing annual rate that reached a maximum of 9.41% in 2021")
+        st.warning("What is CO2 emissions per capita?")
+        st.warning("Carbon dioxide emissions are those stemming from the burning of fossil fuels and the manufacture of cement. They include carbon dioxide produced during consumption of solid, liquid, and gas fuels and gas")
+        st.warning("In 2021, CO2 emissions per capita for India was 1.9 tons, for germany 9.42 tons, for USA 15.32 tons, for brazil 2.24 tons, china 7.42 tons.")
