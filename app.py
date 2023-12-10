@@ -2,11 +2,35 @@ import streamlit as st
 
 # Define emission factors (example values, replace with accurate data)
 EMISSION_FACTORS = {
+    "United States": {
+        "Transportation": 0.4,  # kgCO2/mile
+        "Electricity": 0.4,  # kgCO2/kWh
+        "Diet": 2.5,  # kgCO2/meal, 2.5kgCO2/kg
+        "Waste": 0.6  # kgCO2/kg
+    },
+    "China": {
+        "Transportation": 0.2,  # kgCO2/km
+        "Electricity": 0.7,  # kgCO2/kWh
+        "Diet": 1.5,  # kgCO2/meal, 2.5kgCO2/kg
+        "Waste": 0.8  # kgCO2/kg
+    },
     "India": {
-        "Transportation": 0.14,  # kgCO2/km
-        "Electricity": 0.82,  # kgCO2/kWh
-        "Diet": 1.25,  # kgCO2/meal, 2.5kgco2/kg
-        "Waste": 0.1  # kgCO2/kg
+        "Transportation": 0.1,  # kgCO2/km
+        "Electricity": 0.6,  # kgCO2/kWh
+        "Diet": 1.0,  # kgCO2/meal, 2.5kgCO2/kg
+        "Waste": 0.4  # kgCO2/kg
+    },
+    "Germany": {
+        "Transportation": 0.15,  # kgCO2/km
+        "Electricity": 0.3,  # kgCO2/kWh
+        "Diet": 2.0,  # kgCO2/meal, 2.5kgCO2/kg
+        "Waste": 0.5  # kgCO2/kg
+    },
+    "Brazil": {
+        "Transportation": 0.3,  # kgCO2/km
+        "Electricity": 0.2,  # kgCO2/kWh
+        "Diet": 1.8,  # kgCO2/meal, 2.5kgCO2/kg
+        "Waste": 0.7  # kgCO2/kg
     }
 }
 
@@ -18,7 +42,7 @@ st.title("Personal Carbon Calculator App ⚠️")
 
 # User inputs
 st.subheader("🌍 Your Country")
-country = st.selectbox("Select", ["India"])
+country = st.selectbox("Select", ["India","Brazil","Germany","China","United States"])
 
 col1, col2 = st.columns(2)
 
